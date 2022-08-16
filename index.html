@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Criptador</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/Vector.svg" alt="logo-alura">
+    </header>
+    <main>
+        <div class="divInput">
+            <textarea style="resize: none" cols="30" rows="7" placeholder="Digite seu texto." id="inputCriptografia" type="text"></textarea>
+
+            <div id="info">
+                <img id="infoImage" src="img/iconDoI.svg" alt="imagem de um 'i'">
+                <p>Apenas letras minúsculas e sem acento.</p>
+            </div>
+
+            <div>
+                <button onclick="criptografador(document.getElementById('inputCriptografia').value)" class="buttonCriptografia">
+                    Criptografar
+                </button>
+                <button onclick="descriptografador(document.getElementById('inputCriptografia').value)" id="buttonCriptografiaBranco" class="buttonCriptografia">
+                Descriptografar
+                </button>
+            </div>
+        </div>
+
+        <div class="divDescriptografia">
+            <img id="imagemDescriptografia" src="img/mensagemEncontrada.svg" alt="Imagem de uma criança vendo um diamante">
+            <h2 id='msgSobreDescriptografia' class="textDiscriptografia">Nenhuma mensagem encontrada</h2>
+            <p id="MsgDescriptografada" class="textDiscriptografia">Digite um texto que você deseja criptografar ou descriptografar.</p>
+            <button onclick="copiarTexto()" id="buttonCopiar" class="buttonCriptografia">
+                Copiar
+            </button>
+        </div>
+    </main>
+</body>
+</html>
